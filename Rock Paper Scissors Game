@@ -1,0 +1,34 @@
+import random
+while True:
+    print("Welcome to the rock, paper, scissors game")
+
+    computerOptions = ["rock", "paper", "scissors"]
+    computerChoice = random.choice(computerOptions).lower()
+    userChoice = input("Enter rock, paper, or scissors (or 'quit' to quit the game) \n")
+    userChoice = userChoice.lower()
+
+    if userChoice == "quit":
+        print("Thank you for playing")
+        break
+    else:
+        if computerChoice == "rock":
+            if userChoice == "paper":
+                print("You win!")
+            elif userChoice == "rock":
+                print("Tie")
+            else:
+                print("You lose. The Computer chose rock")
+        if computerChoice == "paper":
+            if userChoice == "scissors":
+                print("You win!")
+            elif userChoice == "paper":
+                print("Tie")
+            else:
+                print("You lose. The Computer chose paper")
+        if computerChoice == "scissors":
+            if userChoice == "rock":
+                print("You win!")
+            elif userChoice == "scissors":
+                print("Tie")
+            else:
+                print("You lose. The Computer chose scissors")
